@@ -5,14 +5,12 @@ import { Column, Entity } from "typeorm";
 export class Post extends BaseEntity {
 
     @Column({type: 'varchar', length: 100, nullable: false})
-    name: string;
+    FirstName: string;
 
     @Column({type: 'varchar', length: 100, nullable: true})
-    domain: string;
+    LastName: string;
 
     @Column({type: 'text', nullable: true, default: null})
-    description: string;
+    PictureURL: string;
 
 }
-
-//hello//

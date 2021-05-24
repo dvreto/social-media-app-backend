@@ -3,12 +3,14 @@ import { CreateDateColumn, PrimaryGeneratedColumn } from "typeorm";
 export class BaseEntity {
 
     @PrimaryGeneratedColumn()
-
     id?:number;
 
     @CreateDateColumn({nullable: true})
-    createdAt: Date;
+    createdAt?: Date;
 
     @CreateDateColumn({nullable: true})
-    updatedAt: Date;
+    updatedAt?: Date;
+
+    @CreateDateColumn({nullable: true})
+    DeleteAt?: Date;
 }
